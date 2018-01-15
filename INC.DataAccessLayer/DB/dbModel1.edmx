@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DataAccessLayer.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="swift_msg_inc">
+          <Key>
+            <PropertyRef Name="rec_no" />
+          </Key>
+          <Property Name="rec_no" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rec_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="applic" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="branchcode" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="date_in" Type="datetime" Nullable="false" />
+          <Property Name="batch_id" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="cod_stat" Type="char" MaxLength="1" />
+          <Property Name="complete_flg" Type="char" MaxLength="1" />
+          <Property Name="swift_date" Type="datetime" />
+          <Property Name="swift_type" Type="char" MaxLength="3" />
+          <Property Name="file_name" Type="char" MaxLength="12" />
+          <Property Name="ref_no" Type="char" MaxLength="20" />
+          <Property Name="our_ref" Type="char" MaxLength="20" />
+          <Property Name="ar_pist_str" Type="char" MaxLength="10" />
+          <Property Name="ar_axia_str" Type="char" MaxLength="10" />
+          <Property Name="diak_no_str" Type="char" MaxLength="10" />
+          <Property Name="diak_date" Type="datetime" />
+          <Property Name="swift_code" Type="char" MaxLength="11" />
+          <Property Name="sender_vostro" Type="char" MaxLength="1" />
+          <Property Name="oae" Type="char" MaxLength="1" />
+          <Property Name="stp" Type="char" MaxLength="1" />
+          <Property Name="for_proc" Type="char" MaxLength="1" />
+          <Property Name="for_reject" Type="char" MaxLength="1" />
+          <Property Name="for_auth" Type="char" MaxLength="1" />
+          <Property Name="for_check" Type="char" MaxLength="1" />
+          <Property Name="for_valeur" Type="char" MaxLength="1" />
+          <Property Name="ccy" Type="char" MaxLength="3" />
+          <Property Name="amount" Type="decimal" Precision="17" Scale="2" />
+          <Property Name="embast" Type="decimal" Precision="17" Scale="2" />
+          <Property Name="axia_poso1" Type="decimal" Precision="17" Scale="2" />
+          <Property Name="axia_poso2" Type="decimal" Precision="17" Scale="2" />
+          <Property Name="axia_poso4" Type="decimal" Precision="17" Scale="2" />
+          <Property Name="f71a" Type="char" MaxLength="3" />
+          <Property Name="f71g" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="account" Type="char" MaxLength="35" />
+          <Property Name="account_ok" Type="char" MaxLength="1" />
+          <Property Name="base" Type="char" MaxLength="10" />
+          <Property Name="f59_1" Type="char" MaxLength="35" />
+          <Property Name="f59_base" Type="char" MaxLength="10" />
+          <Property Name="cust_account" Type="char" MaxLength="35" />
+          <Property Name="cust_ccy" Type="char" MaxLength="3" />
+          <Property Name="synal_code" Type="char" MaxLength="5" />
+          <Property Name="corresp" Type="char" MaxLength="6" />
+          <Property Name="corresp_ok" Type="char" MaxLength="1" />
+          <Property Name="timh" Type="decimal" Precision="11" Scale="6" />
+          <Property Name="timh_type" Type="char" MaxLength="1" />
+          <Property Name="dealref" Type="char" MaxLength="15" />
+          <Property Name="back_office" Type="char" MaxLength="6" />
+          <Property Name="nimexe" Type="char" MaxLength="11" />
+          <Property Name="valeur1" Type="datetime" />
+          <Property Name="valeur2" Type="datetime" />
+          <Property Name="corresp2" Type="char" MaxLength="6" />
+          <Property Name="ben_key" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="num_sess" Type="char" MaxLength="4" />
+          <Property Name="num_osn" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="kod_aitisis" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="eidos_aitisis" Type="char" MaxLength="3" />
+          <Property Name="rejected" Type="char" MaxLength="1" />
+          <Property Name="closed" Type="char" MaxLength="1" />
+          <Property Name="closed_date" Type="datetime" />
+          <Property Name="parent_rec_id" Type="int" />
+          <Property Name="batch_no" Type="int" />
+          <Property Name="swift_inc_group_no" Type="int" />
+          <Property Name="diak_no_inc" Type="char" MaxLength="10" />
+          <Property Name="diak_no_out" Type="char" MaxLength="10" />
+          <Property Name="date_serv" Type="char" MaxLength="10" />
+          <Property Name="satellitecode" Type="char" MaxLength="4" />
+          <Property Name="categ1" Type="char" MaxLength="4" />
+          <Property Name="categ2" Type="char" MaxLength="4" />
+          <Property Name="mt190" Type="char" MaxLength="1" />
+          <Property Name="for_mt190" Type="char" MaxLength="1" />
+          <Property Name="for_mt191" Type="char" MaxLength="1" />
+          <Property Name="mt191" Type="char" MaxLength="1" />
+          <Property Name="mt191_swift" Type="char" MaxLength="10" />
+          <Property Name="mt191_date" Type="datetime" />
+          <Property Name="mt191_failed" Type="char" MaxLength="1" />
+          <Property Name="mt191_failed_error" Type="char" MaxLength="35" />
+          <Property Name="reply_swift" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="reply_date" Type="datetime" />
+          <Property Name="no_reply" Type="char" MaxLength="1" />
+          <Property Name="stp_error" Type="char" MaxLength="150" />
+          <Property Name="customer_soundex" Type="char" MaxLength="1" />
+          <Property Name="email_to_cust" Type="datetime" />
+          <Property Name="email_to_auth" Type="datetime" />
+          <Property Name="temp_id" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="temp_no" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="author" Type="varchar" MaxLength="50" />
+          <Property Name="f33b_2" Type="char" MaxLength="3" />
+          <Property Name="diak_date_inc" Type="datetime" />
+          <Property Name="diak_date_out" Type="datetime" />
+          <Property Name="swift_no_out" Type="char" MaxLength="10" />
+          <Property Name="swift_date_out" Type="datetime" />
+          <Property Name="cust_valeur" Type="datetime" />
+          <Property Name="prom1" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="f20" Type="char" MaxLength="16" />
+          <Property Name="f21" Type="char" MaxLength="16" />
+          <Property Name="amt" Type="numeric" Precision="16" Scale="2" />
+          <Property Name="corresp1" Type="char" MaxLength="6" />
+          <Property Name="dest0" Type="char" MaxLength="11" />
+          <Property Name="cust_account_is_ok" Type="char" MaxLength="1" />
+          <Property Name="cust_account_is_iban" Type="char" MaxLength="1" />
+          <Property Name="mci_lock" Type="char" MaxLength="1" />
+          <Property Name="remarks" Type="char" MaxLength="120" />
+          <Property Name="date_ins" Type="char" MaxLength="8" />
+          <Property Name="time_ins" Type="char" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="swift_msg_txt">
+          <Key>
+            <PropertyRef Name="rec_no" />
+          </Key>
+          <Property Name="rec_no" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="rec_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="applic" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="branchcode" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="date_in" Type="datetime" Nullable="false" />
+          <Property Name="swift_type" Type="char" MaxLength="3" />
+          <Property Name="msg_txt" Type="text" />
+          <Property Name="file_name" Type="char" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="swift_prn">
+          <Key>
+            <PropertyRef Name="rec_id" />
+          </Key>
+          <Property Name="rec_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="swift_no" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="serial_no" Type="int" />
+          <Property Name="code_title" Type="char" MaxLength="45" />
+          <Property Name="code_no" Type="char" MaxLength="3" />
+          <Property Name="code_no_serial" Type="int" />
+          <Property Name="table_name" Type="varchar" MaxLength="50" />
+          <Property Name="field_name" Type="varchar" MaxLength="240" />
+          <Property Name="field_type" Type="char" MaxLength="2" />
+          <Property Name="field_len" Type="smallint" />
+          <Property Name="max_lines" Type="smallint" />
+          <Property Name="field_cont" Type="varchar" MaxLength="50" />
+          <Property Name="field_cont_type" Type="char" MaxLength="2" />
+          <Property Name="field_not_cont" Type="varchar" MaxLength="50" />
+          <Property Name="field_not_cont_type" Type="char" MaxLength="2" />
+        </EntityType>
+        <EntityContainer Name="DataAccessLayerModelStoreContainer">
+          <EntitySet Name="swift_msg_inc" EntityType="Self.swift_msg_inc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="swift_msg_txt" EntityType="Self.swift_msg_txt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="swift_prn" EntityType="Self.swift_prn" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DomainModel.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="swift_msg_inc">
+          <Key>
+            <PropertyRef Name="rec_no" />
+          </Key>
+          <Property Name="rec_no" Type="Decimal" Precision="10" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rec_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="applic" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="branchcode" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="date_in" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="batch_id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cod_stat" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="complete_flg" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="swift_date" Type="DateTime" Precision="3" />
+          <Property Name="swift_type" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="file_name" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="ref_no" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="our_ref" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="ar_pist_str" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ar_axia_str" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="diak_no_str" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="diak_date" Type="DateTime" Precision="3" />
+          <Property Name="swift_code" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="sender_vostro" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="oae" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="stp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_proc" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_reject" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_auth" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_check" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_valeur" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ccy" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="amount" Type="Decimal" Precision="17" Scale="2" />
+          <Property Name="embast" Type="Decimal" Precision="17" Scale="2" />
+          <Property Name="axia_poso1" Type="Decimal" Precision="17" Scale="2" />
+          <Property Name="axia_poso2" Type="Decimal" Precision="17" Scale="2" />
+          <Property Name="axia_poso4" Type="Decimal" Precision="17" Scale="2" />
+          <Property Name="f71a" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="f71g" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="account" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="account_ok" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="base" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="f59_1" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="f59_base" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="cust_account" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="cust_ccy" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="synal_code" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="corresp" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="corresp_ok" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="timh" Type="Decimal" Precision="11" Scale="6" />
+          <Property Name="timh_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="dealref" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="back_office" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="nimexe" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="valeur1" Type="DateTime" Precision="3" />
+          <Property Name="valeur2" Type="DateTime" Precision="3" />
+          <Property Name="corresp2" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="ben_key" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="num_sess" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="num_osn" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="kod_aitisis" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="eidos_aitisis" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="rejected" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="closed" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="closed_date" Type="DateTime" Precision="3" />
+          <Property Name="parent_rec_id" Type="Int32" />
+          <Property Name="batch_no" Type="Int32" />
+          <Property Name="swift_inc_group_no" Type="Int32" />
+          <Property Name="diak_no_inc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="diak_no_out" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="date_serv" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="satellitecode" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="categ1" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="categ2" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="mt190" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_mt190" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="for_mt191" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="mt191" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="mt191_swift" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="mt191_date" Type="DateTime" Precision="3" />
+          <Property Name="mt191_failed" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="mt191_failed_error" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="reply_swift" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="reply_date" Type="DateTime" Precision="3" />
+          <Property Name="no_reply" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="stp_error" Type="String" MaxLength="150" FixedLength="true" Unicode="false" />
+          <Property Name="customer_soundex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="email_to_cust" Type="DateTime" Precision="3" />
+          <Property Name="email_to_auth" Type="DateTime" Precision="3" />
+          <Property Name="temp_id" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="temp_no" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="f33b_2" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="diak_date_inc" Type="DateTime" Precision="3" />
+          <Property Name="diak_date_out" Type="DateTime" Precision="3" />
+          <Property Name="swift_no_out" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="swift_date_out" Type="DateTime" Precision="3" />
+          <Property Name="cust_valeur" Type="DateTime" Precision="3" />
+          <Property Name="prom1" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="f20" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="f21" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="amt" Type="Decimal" Precision="16" Scale="2" />
+          <Property Name="corresp1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="dest0" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="cust_account_is_ok" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cust_account_is_iban" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="mci_lock" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="remarks" Type="String" MaxLength="120" FixedLength="true" Unicode="false" />
+          <Property Name="date_ins" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="time_ins" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="swift_msg_txt">
+          <Key>
+            <PropertyRef Name="rec_no" />
+          </Key>
+          <Property Name="rec_no" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="rec_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="applic" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="branchcode" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="date_in" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="swift_type" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="msg_txt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="file_name" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="swift_prn">
+          <Key>
+            <PropertyRef Name="rec_id" />
+          </Key>
+          <Property Name="rec_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="swift_no" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="serial_no" Type="Int32" />
+          <Property Name="code_title" Type="String" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Name="code_no" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="code_no_serial" Type="Int32" />
+          <Property Name="table_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="field_name" Type="String" MaxLength="240" FixedLength="false" Unicode="false" />
+          <Property Name="field_type" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="field_len" Type="Int16" />
+          <Property Name="max_lines" Type="Int16" />
+          <Property Name="field_cont" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="field_cont_type" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="field_not_cont" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="field_not_cont_type" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="IncomingEntities" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="swift_msg_inc" EntityType="Self.swift_msg_inc" />
+          <EntitySet Name="swift_msg_txt" EntityType="Self.swift_msg_txt" />
+          <EntitySet Name="swift_prn" EntityType="Self.swift_prn" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataAccessLayerModelStoreContainer" CdmEntityContainer="IncomingEntities">
+          <EntitySetMapping Name="swift_msg_inc">
+            <EntityTypeMapping TypeName="DomainModel.Model.swift_msg_inc">
+              <MappingFragment StoreEntitySet="swift_msg_inc">
+                <ScalarProperty Name="rec_no" ColumnName="rec_no" />
+                <ScalarProperty Name="rec_id" ColumnName="rec_id" />
+                <ScalarProperty Name="applic" ColumnName="applic" />
+                <ScalarProperty Name="branchcode" ColumnName="branchcode" />
+                <ScalarProperty Name="date_in" ColumnName="date_in" />
+                <ScalarProperty Name="batch_id" ColumnName="batch_id" />
+                <ScalarProperty Name="cod_stat" ColumnName="cod_stat" />
+                <ScalarProperty Name="complete_flg" ColumnName="complete_flg" />
+                <ScalarProperty Name="swift_date" ColumnName="swift_date" />
+                <ScalarProperty Name="swift_type" ColumnName="swift_type" />
+                <ScalarProperty Name="file_name" ColumnName="file_name" />
+                <ScalarProperty Name="ref_no" ColumnName="ref_no" />
+                <ScalarProperty Name="our_ref" ColumnName="our_ref" />
+                <ScalarProperty Name="ar_pist_str" ColumnName="ar_pist_str" />
+                <ScalarProperty Name="ar_axia_str" ColumnName="ar_axia_str" />
+                <ScalarProperty Name="diak_no_str" ColumnName="diak_no_str" />
+                <ScalarProperty Name="diak_date" ColumnName="diak_date" />
+                <ScalarProperty Name="swift_code" ColumnName="swift_code" />
+                <ScalarProperty Name="sender_vostro" ColumnName="sender_vostro" />
+                <ScalarProperty Name="oae" ColumnName="oae" />
+                <ScalarProperty Name="stp" ColumnName="stp" />
+                <ScalarProperty Name="for_proc" ColumnName="for_proc" />
+                <ScalarProperty Name="for_reject" ColumnName="for_reject" />
+                <ScalarProperty Name="for_auth" ColumnName="for_auth" />
+                <ScalarProperty Name="for_check" ColumnName="for_check" />
+                <ScalarProperty Name="for_valeur" ColumnName="for_valeur" />
+                <ScalarProperty Name="ccy" ColumnName="ccy" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="embast" ColumnName="embast" />
+                <ScalarProperty Name="axia_poso1" ColumnName="axia_poso1" />
+                <ScalarProperty Name="axia_poso2" ColumnName="axia_poso2" />
+                <ScalarProperty Name="axia_poso4" ColumnName="axia_poso4" />
+                <ScalarProperty Name="f71a" ColumnName="f71a" />
+                <ScalarProperty Name="f71g" ColumnName="f71g" />
+                <ScalarProperty Name="account" ColumnName="account" />
+                <ScalarProperty Name="account_ok" ColumnName="account_ok" />
+                <ScalarProperty Name="base" ColumnName="base" />
+                <ScalarProperty Name="f59_1" ColumnName="f59_1" />
+                <ScalarProperty Name="f59_base" ColumnName="f59_base" />
+                <ScalarProperty Name="cust_account" ColumnName="cust_account" />
+                <ScalarProperty Name="cust_ccy" ColumnName="cust_ccy" />
+                <ScalarProperty Name="synal_code" ColumnName="synal_code" />
+                <ScalarProperty Name="corresp" ColumnName="corresp" />
+                <ScalarProperty Name="corresp_ok" ColumnName="corresp_ok" />
+                <ScalarProperty Name="timh" ColumnName="timh" />
+                <ScalarProperty Name="timh_type" ColumnName="timh_type" />
+                <ScalarProperty Name="dealref" ColumnName="dealref" />
+                <ScalarProperty Name="back_office" ColumnName="back_office" />
+                <ScalarProperty Name="nimexe" ColumnName="nimexe" />
+                <ScalarProperty Name="valeur1" ColumnName="valeur1" />
+                <ScalarProperty Name="valeur2" ColumnName="valeur2" />
+                <ScalarProperty Name="corresp2" ColumnName="corresp2" />
+                <ScalarProperty Name="ben_key" ColumnName="ben_key" />
+                <ScalarProperty Name="num_sess" ColumnName="num_sess" />
+                <ScalarProperty Name="num_osn" ColumnName="num_osn" />
+                <ScalarProperty Name="kod_aitisis" ColumnName="kod_aitisis" />
+                <ScalarProperty Name="eidos_aitisis" ColumnName="eidos_aitisis" />
+                <ScalarProperty Name="rejected" ColumnName="rejected" />
+                <ScalarProperty Name="closed" ColumnName="closed" />
+                <ScalarProperty Name="closed_date" ColumnName="closed_date" />
+                <ScalarProperty Name="parent_rec_id" ColumnName="parent_rec_id" />
+                <ScalarProperty Name="batch_no" ColumnName="batch_no" />
+                <ScalarProperty Name="swift_inc_group_no" ColumnName="swift_inc_group_no" />
+                <ScalarProperty Name="diak_no_inc" ColumnName="diak_no_inc" />
+                <ScalarProperty Name="diak_no_out" ColumnName="diak_no_out" />
+                <ScalarProperty Name="date_serv" ColumnName="date_serv" />
+                <ScalarProperty Name="satellitecode" ColumnName="satellitecode" />
+                <ScalarProperty Name="categ1" ColumnName="categ1" />
+                <ScalarProperty Name="categ2" ColumnName="categ2" />
+                <ScalarProperty Name="mt190" ColumnName="mt190" />
+                <ScalarProperty Name="for_mt190" ColumnName="for_mt190" />
+                <ScalarProperty Name="for_mt191" ColumnName="for_mt191" />
+                <ScalarProperty Name="mt191" ColumnName="mt191" />
+                <ScalarProperty Name="mt191_swift" ColumnName="mt191_swift" />
+                <ScalarProperty Name="mt191_date" ColumnName="mt191_date" />
+                <ScalarProperty Name="mt191_failed" ColumnName="mt191_failed" />
+                <ScalarProperty Name="mt191_failed_error" ColumnName="mt191_failed_error" />
+                <ScalarProperty Name="reply_swift" ColumnName="reply_swift" />
+                <ScalarProperty Name="reply_date" ColumnName="reply_date" />
+                <ScalarProperty Name="no_reply" ColumnName="no_reply" />
+                <ScalarProperty Name="stp_error" ColumnName="stp_error" />
+                <ScalarProperty Name="customer_soundex" ColumnName="customer_soundex" />
+                <ScalarProperty Name="email_to_cust" ColumnName="email_to_cust" />
+                <ScalarProperty Name="email_to_auth" ColumnName="email_to_auth" />
+                <ScalarProperty Name="temp_id" ColumnName="temp_id" />
+                <ScalarProperty Name="temp_no" ColumnName="temp_no" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="f33b_2" ColumnName="f33b_2" />
+                <ScalarProperty Name="diak_date_inc" ColumnName="diak_date_inc" />
+                <ScalarProperty Name="diak_date_out" ColumnName="diak_date_out" />
+                <ScalarProperty Name="swift_no_out" ColumnName="swift_no_out" />
+                <ScalarProperty Name="swift_date_out" ColumnName="swift_date_out" />
+                <ScalarProperty Name="cust_valeur" ColumnName="cust_valeur" />
+                <ScalarProperty Name="prom1" ColumnName="prom1" />
+                <ScalarProperty Name="f20" ColumnName="f20" />
+                <ScalarProperty Name="f21" ColumnName="f21" />
+                <ScalarProperty Name="amt" ColumnName="amt" />
+                <ScalarProperty Name="corresp1" ColumnName="corresp1" />
+                <ScalarProperty Name="dest0" ColumnName="dest0" />
+                <ScalarProperty Name="cust_account_is_ok" ColumnName="cust_account_is_ok" />
+                <ScalarProperty Name="cust_account_is_iban" ColumnName="cust_account_is_iban" />
+                <ScalarProperty Name="mci_lock" ColumnName="mci_lock" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="date_ins" ColumnName="date_ins" />
+                <ScalarProperty Name="time_ins" ColumnName="time_ins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="swift_msg_txt">
+            <EntityTypeMapping TypeName="DomainModel.Model.swift_msg_txt">
+              <MappingFragment StoreEntitySet="swift_msg_txt">
+                <ScalarProperty Name="rec_no" ColumnName="rec_no" />
+                <ScalarProperty Name="rec_id" ColumnName="rec_id" />
+                <ScalarProperty Name="applic" ColumnName="applic" />
+                <ScalarProperty Name="branchcode" ColumnName="branchcode" />
+                <ScalarProperty Name="date_in" ColumnName="date_in" />
+                <ScalarProperty Name="swift_type" ColumnName="swift_type" />
+                <ScalarProperty Name="msg_txt" ColumnName="msg_txt" />
+                <ScalarProperty Name="file_name" ColumnName="file_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="swift_prn">
+            <EntityTypeMapping TypeName="DomainModel.Model.swift_prn">
+              <MappingFragment StoreEntitySet="swift_prn">
+                <ScalarProperty Name="rec_id" ColumnName="rec_id" />
+                <ScalarProperty Name="swift_no" ColumnName="swift_no" />
+                <ScalarProperty Name="serial_no" ColumnName="serial_no" />
+                <ScalarProperty Name="code_title" ColumnName="code_title" />
+                <ScalarProperty Name="code_no" ColumnName="code_no" />
+                <ScalarProperty Name="code_no_serial" ColumnName="code_no_serial" />
+                <ScalarProperty Name="table_name" ColumnName="table_name" />
+                <ScalarProperty Name="field_name" ColumnName="field_name" />
+                <ScalarProperty Name="field_type" ColumnName="field_type" />
+                <ScalarProperty Name="field_len" ColumnName="field_len" />
+                <ScalarProperty Name="max_lines" ColumnName="max_lines" />
+                <ScalarProperty Name="field_cont" ColumnName="field_cont" />
+                <ScalarProperty Name="field_cont_type" ColumnName="field_cont_type" />
+                <ScalarProperty Name="field_not_cont" ColumnName="field_not_cont" />
+                <ScalarProperty Name="field_not_cont_type" ColumnName="field_not_cont_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
